@@ -20,6 +20,7 @@ class ArrayLis{
         for(i = 0; i < A.length ; i++)
             System.out.print(A[i] + " ");
     }
+    //Insertion Sort
     public void insertionSort(){
             int i,temp,j;
             for(i =1; i < A.length ; i++){
