@@ -1,41 +1,40 @@
 import java.util.*;
 class ArrayLis{
-    int arr[];
+    int A[];
     public ArrayLis(){
         
     }
     public ArrayLis(int x){
-        arr = new int[x];
+        A = new int[x];
     }
     public void insertion(){
         int i;
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter "+arr.length + " elements in array ");
-        for(i = 0; i < arr.length ; i++)
-            arr[i] = scan.nextInt();
+        System.out.println("Enter "+A.length + " elements in array ");
+        for(i = 0; i < A.length ; i++)
+            A[i] = scan.nextInt();
     }
     
     public void printArray(){
         int i;
-        for(i = 0; i < arr.length ; i++)
-            System.out.print(arr[i] + " ");
+        for(i = 0; i < A.length ; i++)
+            System.out.print(A[i] + " ");
     }
-  //insertion Sort Algorithm
     public void insertionSort(){
             int i,temp,j;
-            for(i =1; i < arr.length ; i++){
+            for(i =1; i < A.length ; i++){
                 j = i;
-                while(j>0 && arr[j-1] > arr[j]){
-                    temp = arr[j];
-                    arr[j] = arr[j-1];
-                    arr[j-1]= temp;
+                while(j>0 && A[j-1] > A[j]){
+                    temp = A[j];
+                    A[j] = A[j-1];
+                    A[j-1]= temp;
                     j--;
                 }
             }
     }
 }
 
-class InsertionSort {
+class Main {
     public static void main(String[] args) {
         ArrayLis ob = new ArrayLis(4);
         ob.insertion();
